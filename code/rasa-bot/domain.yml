@@ -1,0 +1,154 @@
+version: '2.0'
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+intents:
+- closure
+- name_teacher
+- about_school
+- anyone_else
+- about_touching
+- about_cupboard
+- what_did_he_say
+- told_who
+- not_in_trouble
+- greet
+- how_did_you_feel
+- facilitator
+- about_game
+- about_game3
+- which_grade
+- about_art
+- what_did_he_do
+- whats_your_name
+- went_outside
+- how_many_times
+- intro
+- smalltalk
+- invitation
+- about_teacher
+- about_teacher2
+- about_crying
+- which_subject
+responses:
+  utter_reply_invitation:
+  - text: About my teacher.
+  utter_reply_my_name:
+  - text: My name is Lucy.
+  utter_reply_age:
+  - text: I'm six. I started school this year.
+  utter_reply_name:
+  - text: It's Mr Matthews. He is my art teacher.
+  utter_reply_about_school:
+  - text: I like school. I just don't like my teacher.
+  utter_reply_class:
+  - text: Mr Matthews is my art teacher.
+  utter_reply_about_art:
+  - text: I like art. This term I'm the art monitor so at the end of every class I have to put all the paints away in the big cupboard, but sometimes Mr Matthews follows me inside.
+  utter_reply_about_teacher:
+  - text: I don't like him.
+  utter_reply_about_teacher2:
+  - text: He makes me play a game that I don't like.
+  utter_reply_about_game:
+  - text: He makes me play show and tell and it's really naughty.
+  utter_reply_about_game2:
+  - text: He says that he will go first, and he pulls down his pants and then he shows me his willy and then he says that it’s my turn and that I have to show him my mini.
+  utter_reply_about_game3:
+  - text: I pull my dress up and my undies down and then he looks at my mini and I started crying.
+  utter_reply_what_did_he_do:
+  - text: He touches his willy and sometimes he makes me touch it.
+  utter_reply_about_touching:
+  - text: He just grabs my hand and puts it on his willy. And then one time he tried to touch my mini.
+  utter_touch_mini:
+  - text: He just put his fingers on my mini and he rubbed them around and I started crying.
+  utter_reply_about_crying:
+  - text: I just don’t like showing people my mini and I don't want to play anymore.
+  utter_reply_what_did_he_say:
+  - text: Then he just came and gave me a hug and said that I could go and play outside with my friends.
+  utter_not_tell_anyone:
+  - text: He told me not to tell anyone or I’d get in big trouble.
+  utter_told_dad:
+  - text: I just told my dad that I don't want to play the naughty game anymore.
+  utter_reply_how_many_times:
+  - text: Just a few times.
+  utter_end_of_story:
+  - text: And then I just went out to lunch.
+  utter_reply_how_did_you_feel:
+  - text: It made me feel yuck.
+  utter_greet:
+  - text: I'm good.
+  - text: I'm fine.
+  - text: I'm okay.
+  - text: I am good.
+  - text: I am fine.
+  - text: I am okay.
+  utter_reluctance:
+  - text: I don't know.
+  - text: I'm not sure.
+  - text: (Shrugs)
+  utter_confusion:
+  - text: Huh?
+  - text: What?
+  - text: I don't understand.
+  - text: What did you say?
+  - text: What do you mean?
+  utter_correction:
+  - text: I already answered that.
+  - text: That is not correct.
+  - text: That is not what happened.
+  - text: I never said that.
+  - text: That is not true.
+  utter_confirmation:
+  - text: Ok.
+  - text: (Nods)
+  - text: Uh-huh.
+  utter_denial:
+  - text: No.
+  - text: That didn't happen.
+  - text: (Shakes head)
+  - text: Something like that never happened.
+  - text: Not that.
+  - text: Never.
+  utter_silence:
+  - text: (Silent)
+  utter_goodbye:
+  - text: Bye.
+  utter_default:
+  - text: Huh?
+  - text: What?
+  - text: I don't understand.
+  - text: What did you say?
+  - text: What do you mean?
+actions:
+- action_pick_action_suggestive
+- utter_confirmation
+- utter_confusion
+- utter_correction
+- utter_default
+- utter_denial
+- utter_end_of_story
+- utter_goodbye
+- utter_greet
+- utter_not_tell_anyone
+- utter_reluctance
+- utter_reply_about_art
+- utter_reply_about_crying
+- utter_reply_about_game
+- utter_reply_about_game2
+- utter_reply_about_game3
+- utter_reply_about_school
+- utter_reply_about_teacher
+- utter_reply_about_teacher2
+- utter_reply_about_touching
+- utter_reply_age
+- utter_reply_class
+- utter_reply_how_did_you_feel
+- utter_reply_how_many_times
+- utter_reply_invitation
+- utter_reply_my_name
+- utter_reply_name
+- utter_reply_what_did_he_do
+- utter_reply_what_did_he_say
+- utter_silence
+- utter_told_dad
+- utter_touch_mini

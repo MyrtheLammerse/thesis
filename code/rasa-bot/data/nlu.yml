@@ -1,0 +1,464 @@
+version: "2.0"
+nlu:
+- intent: greet
+  examples: |
+    - hello, glad to meet you today, how are you?
+    - hey, I am glad to meet you today, how are you?
+    - Hey there, how are you?
+    - hello, how are you?
+    - hi, how are you?
+    - good morning , how are you?
+    - good evening, how are you?
+    - Hello, I am glad to meet you today, how are you?
+    - Hello, I am glad to meet you today. How are you?
+    - Hello, it is nice to meet you. How are you?
+    - Hello. How are you today?
+    - Hi, I am glad to meet you. How are you?
+    - Hi, how are you today?
+    - Hello. Nice to meet you. How are you?
+    - Hello, how are you today?
+    - Hello. It is nice to meet you. How are you today?
+    - Hello, it is nice to meet you. How are you today?
+    - Hello. Nice to meet you. How are you today?
+    - Hello. Nice to meet you today. How are you?
+    - Hello, it is nice to meet you . How are you?
+    - hello, how are you today?
+
+- intent: smalltalk
+  examples: |
+    - your favourite colour?
+    - your favorite subject?
+    - you like school?
+    - what's the name of your school?
+    - who is is your favourite teacher
+    - do you have a best friend
+    - about your friends
+    - do you have any siblings?
+    - where do you go to school?
+    - who brought you here?
+    - who came with you here today?
+- intent: about_school
+  examples: |
+    - do you like school?
+    - how's school?
+    - about school
+    - like about school
+    - talk about school
+    - is school fun?
+    - is school exiting
+
+- intent: which_grade
+  examples: |
+    - which grade are you in?
+    - how old are you?
+    - which class are you in?
+    - which year are you in?
+    - which year did you start school?
+    - when did you start at school?
+    - how many years have you been at this school?
+    - how long have you gone to school?
+- intent: whats_your_name
+  examples : |
+    - What's your name?
+    - your name?
+    - My name is 
+    - My name is what's yours
+    - my name is yours?
+    - hello my name is
+
+- intent: intro
+  examples: |
+    - today we will talk about how things are at school.
+    - my job is to talk to children about things that have happened to them.
+    - y job is to talk to children about things that they have experienced
+    - My job is to talk to children about their lives
+    - My job is to talk to children about things they have experienced
+    - My job is to talk to children about things that have happened
+    - I ask you some questions about school?
+    - I talk to you?
+    - is it ok if I ask you some questions?
+    - I ask you something?
+    - do you mind if we talk for a bit?
+    - do you want to talk to me
+- intent: invitation
+  examples: |
+    - what you've come here to talk about today.
+    - What have you come here to tell me about today?
+    - I want to talk about why you are here today.
+    - Now that we know each other a little better, I want to talk about why you are here today.
+    - what you've come to talk about today
+    - what you've come to talk to me about today
+    - what you've come to talk to me about today?
+    - here to talk about?
+    - why you are here today?
+    - why you are here?
+    - why you are here to talk to me?
+    - what you are here to talk about today?
+    - what you are here to talk about?
+    - came to tell me today?
+    - what you came to tell me?
+    - you come to tell me?
+    - why you have come here today?
+    - what you came to talk to me about?
+    - Now that we know each other a little better, I want to know why you are here today. talk to me about today
+    - why you are here to talk today?
+    - you want to talk to me about?
+    - Do you know why you are here today?
+    - Do you know what you are here to talk to me about?
+    - Tell me what you have come to talk about today
+    - what you have come to talk about?
+- intent: name_teacher
+  examples: |
+    - what your teacher is called?
+    - What is the name of your teacher?
+    - what your teacher's name is?
+    - Who is your teacher?
+    - What do you call your teacher?
+    - What is your teacher's name?
+    - which teacher this is?
+    - Which teacher?
+- intent: which_subject
+  examples: |
+    - in which subject do you have this teacher?
+    - Which subject are they your teacher in?
+    - In which subject?
+    - Which class does your teacher teach?
+    - which class does your teacher have?
+    - in which class do you have your teacher?
+    - what do you do in class with this teacher?
+    - What does your teacher teach you?
+    - In which class are they your teacher?
+    - In what class do you have them as a teacher?
+- intent: about_art
+  examples: |
+    - Do you enjoy art?
+    - How do you like Mr Matthews' class?
+    - What is art class like?
+    - Do you enjoy Mr Matthews' class?
+    - Art sounds fun, how do you like it?
+    - Is that a funny class?
+    - Is that a nice class?
+    - Do you like art?
+    - about art with mr matthews?
+    - What is art with Mr Matthews like?
+- intent: about_cupboard
+  examples: |
+    - after Mr Matthews followed you into the cupboard.
+    - when he followed you inside the cupboard
+    - the last time Mr Matthews followed you into the cupboard?
+    - inside the cupboard?
+    - inside the cupboard then?
+    - Mr Matthews following you into the cupboard.
+    - inside the cupboard with Mr Matthews.
+    - Mr Matthews follows you inside?
+    - He follows you inside
+    - He followed you inside
+- intent: about_game
+  examples: |
+    - about the game
+    - this game that you don't like.
+    - What kind of game?
+    - What kind of game does Mr Matthews make you play?
+    - this game that you play with Mr Matthews?
+    - the game you play inside the cupboard.
+    - the game you play inside the cupboard with Mr Matthews.
+    - the game.
+    - a game?
+    - a game you don't like?
+    - you don't like the game?
+    - which game?
+    - Why don't you like the game?
+    - What kind of game is it since you don't like it?
+    - game that you don't like?
+    - he game that you don't like
+    - the game that he makes you play
+    - never played show and tell
+    - show and tell?
+    - is it naughty?
+    - game is naughty?
+    - you think it's naughty?
+    - naughty game
+    - show and tell work?
+    - how this game goes
+    - I would like to know the game
+    - how the game works
+    - played show and tell with Mr Matthews.
+    - the naughty game
+    - the game called
+- intent: about_game3
+  examples: |
+    - when it was your turn?
+    - like Mr Matthews told you to?
+    - do what he told you to?
+    - as he told you?
+    - you had to show him your mini
+    - show him your mini
+    - pull your dress up
+    - you pull your dress up and show him your mini?
+    - when it was your turn.
+    - your turn?
+    - became your turn?
+- intent: about_teacher
+  examples: |
+    - about your teacher?
+    - about Mr Matthews?
+    - is he nice?
+    - your art teacher?
+    - How is your art teacher?
+    - I don't know Mr Matthews, about him?
+    - about your teacher? I don't know him
+    - I don't know your teacher
+    - a little bit about your teacher?
+    - I haven't met Mr Matthews
+    - I have not met your teacher
+- intent: about_teacher2
+  examples: |
+    - You don't like him?
+    - why you don't like Mr Matthews?
+    - Why don't you like your teacher?
+    - Mr Matthews that you don't like?
+    - What has he done since you don't like him?
+    - you don't like about him?
+    - you do not like him
+    - you do not like your teacher
+    - you and your teacher do together?
+    - you and Mr Matthews do?
+- intent: about_crying
+  examples: |
+    - you start to cry?
+    - when you started crying
+    - you cry
+    - you cried
+    - you feel like crying?
+    - felt like crying
+    - you feel upset?
+    - He made you cry?
+    - Why did he make you cry?
+    - You started crying?
+- intent: what_did_he_say
+  examples: |
+    - Mr Matthews say anything to you?
+    - he say?
+    - your teacher say?
+    - he said
+    - Mr Matthews said
+    - he say something to you
+    - Mr Matthews tell you
+    - he tell you
+    - Mr Matthews say?
+    - he say to you?
+    - your teacher say?
+    - Mr Matthews say  to you later?
+    - Mr Matthews say  before you left?
+    - he say to you before
+    - he say to you afterwards?
+- intent: not_in_trouble
+  examples: |
+    - not in trouble
+    - nothing you say here will ever get you in any trouble
+    - You understand that you are not in trouble?
+    - it is very good that you are telling this, you are not in any trouble.
+    - not in any trouble
+    - doing good and you are not in any trouble.
+    - you are doing very good.
+    - good that you told someone.
+    - good to tell someone
+    - good that you told someone
+    - doing very well.
+    - doing a really good job.
+    - it is good that you have told me
+    - It was good that you told daddy
+    - you don't have to play anymore
+- intent: told_who
+  examples: |
+    - Who did you tell?
+    - tell any
+    - tell anyone about what happened to you?
+    - talk to your parents or any other teachers
+    - Have you told any other teachers?
+    - you talked to your mum?
+    - you told your dad?
+    - told someone
+    - tell your parents about what happened to you?
+    - you told anyone about what Mr Matthews did?
+    - you tell anyone?
+    - you told anyone
+    - Who have you told?
+    - Who else have you talked to others than me? Any teachers?
+    - who did you speak to about this other than me?
+- intent: how_many_times
+  examples: |
+    - How many times have you played show and tell?
+    - How many times have you played show and tell with Mr Matthews?
+    - How many times have you played the game inside the cupboard?
+    - How many times have you played the naughty game with your teacher?
+    - how many times you think this has happened?
+    - happened one time or more than one time?
+    - Has this happened just one time?
+    - how often does this happen?
+    - how often do you play show and tell?
+    - how often does mr matthews follow you inside the cupboard?
+    - how often do you have to play the naughty game
+    - how many times?
+    - How many times have this happened? Just one time?
+    - just one time
+- intent: anyone_else
+  examples: |
+    - to anyone else?
+    - any others?
+    - any of your friends ever played
+    - any of your classmates played show and tell?
+    - only one
+    - with anyone else?
+    - Have anyone else?
+    - Were there others?
+    - others?
+    - anyone else?
+    - someone else?
+    - any others play the game?
+    - others play show and tell with Mr Matthews?
+    - other kids?
+    - Do other kids play?
+    - other children?
+    - happened to any of your friends?
+    - happened to any of your classmates?
+    - your friends played show and tell
+- intent: what_did_he_do
+  examples: |
+    - do something else?
+    - looked at your mini?
+    - do when he looked at your mini?
+    - he has done
+    - he did
+    - what did he do
+    - what does he do
+    - do something bad to you after that?
+    - Mr Matthews do then?
+    - he do to you then?
+    - your teacher do then?
+    - he do then?
+    - he do next?
+    - Mr Matthews sometimes make you touch his willy?
+    - do with his willy?
+    - touch your mini?
+    - Has Mr Matthews ever done something to your mini?
+    - Was he just looking?
+    - When he looked at your mini, what happened then?
+    - When he looked at your mini, what did Mr Matthews do then?
+    - You told me that he looked at your mini. Did he do anything else?
+    - when he looked at your mini.
+    - when he last looked at your mini?
+    - I wasn't there so it is important that you tell me everything about what happened when he looked at your mini.
+    - He touched your mini?
+    - he touched you?
+    - he tried to touch your mini.
+    - he do when he showed you his willy?
+    - he showed you his willy?
+    - just look or did he do anything else?
+
+- intent: about_touching
+  examples: |
+    - when he made you touch his willy.
+    - how he made you touch his willy.
+    - after you touched his willy?
+    - He made you touch his willy?
+    - he made you touch it
+    - he made you touch his privates
+    - after you touched his private parts
+    - when he made you touch his willy?
+
+- intent: how_did_you_feel
+  examples: |
+    - it make you feel
+    - did it hurt?
+    - you feel about it
+    - make you feel
+    - did you think about it
+    - you think about the game
+    - it hurt when he touched you
+    - what  did you think 
+    - you feel when he did that
+    - feel when he did that
+
+- intent: went_outside
+  examples: |
+    - then you went outside
+    - went outside to play
+    - you went outside to play with your friends?
+    - you went and played with your friends?
+    - you just went?
+    - he let you go outside
+    - he let you go then
+
+- intent: facilitator
+  examples: |
+    - Hm
+    - Uh-huh
+    - Ok and then?
+    - and then what happened?
+    - Oh ok.
+    - Yes.
+    - Yes, yes, hm.
+    - Oh, yes, precise, hm.
+    - Tell me more then.
+    - Tell me more about that.
+    - Can you tell me more about that?
+    - Please tell me more
+    - And then?
+    - Mhm
+    - Uh huh
+    - Why?
+    - Why is that?
+    - No, ok.
+    - Okay
+    - Yes, that's ok.
+    - Tell me everything about that.
+    - Anything else?
+    - I understand.
+    - Ok, is that so?
+    - That's right
+    - Tell me some more
+    - Tell me more
+    - I understand
+    - Tell me more about that
+    - Please tell me what happened then.
+    - you do after that?
+    - did you do then?
+    - So what happened then?
+    - What happens then?
+    - What happens next?
+    - What happened next?
+    - you do then?
+    - What happened then?
+    - I wasn't there so it is important that you tell me everything about what happened
+    - I wasn't there so you need to tell me everything
+    - Can you tell me everything you remember about that
+    - tell me everything
+    - tell me all you remember
+    - Tell me all about the time
+    - tell me all about that
+    - Please tell me everything about this game
+    - And what happened then?
+- intent: closure
+  examples: |
+    - That's all the questions I have to ask you today.
+    - You’ve told me why you came here. You’ve given me information and that really helps me to understand what happened.
+    - Thank you, goodbye.
+    - This is all for now.
+    - Thank you for all the information you have given me. This helps me understand what happened.
+    - all for today. You have given me important information, and that is very good
+    - all for now. Bye
+    - all for today.
+    - all for today. Thank you
+    - all the questions I have for you today. Goodbye
+    - no more questions today
+    - finished with the questions
+    - you can go home now. goodbye
+    - We are finished with the questions. You have done good
+    - given me valuable information.
+    - Thank you for coming. That is all for today.
+    - That is all for today. Thank you so much for bringing me this important information.
+    - Thank you for coming. You have given me a lot of valuable information
+    - That's all the questions I had for you today. Thank you for coming
+    - That's all for today. Thank you for coming.
+    - We are finished for today. Goodbye

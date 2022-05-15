@@ -1,0 +1,651 @@
+version: "2.0"
+
+stories:
+- story: introduction
+  steps: 
+  - intent: greet
+  - action: utter_greet
+  - intent: intro
+  - action: utter_confirmation
+
+- story: introduction short
+  steps: 
+  - intent: intro
+  - action: utter_confirmation
+
+- story: smalltalk
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: whats_your_name
+  - action: utter_reply_my_name
+  - intent: which_grade
+  - action: utter_reply_age
+  - intent: about_school
+  - action: utter_reply_about_school
+  - or:
+    - intent: facilitator
+    - intent: about_teacher2
+    - intent: what_did_he_do
+  - action: utter_reply_about_teacher2 
+
+- story: about school and name teacher
+  steps:
+  - intent: about_school
+  - action: utter_reply_about_school
+  - intent: name_teacher
+  - action: utter_reply_name
+  - or:
+    - intent: facilitator
+    - intent: about_teacher2
+    - intent: what_did_he_do
+  - action: utter_reply_about_teacher2 
+
+- story: about school and art
+  steps:
+  - intent: about_school
+  - action: utter_reply_about_school
+  - intent: which_subject
+  - action: utter_reply_class
+  - intent: about_art
+  - action: utter_reply_about_art
+  - or:
+    - intent: facilitator
+    - intent: about_cupboard
+    - intent: what_did_he_do
+  - action: utter_reply_about_teacher2 
+
+- story: about school and teacher
+  steps:
+  - intent: about_school
+  - action: utter_reply_about_school
+  - intent: which_subject
+  - action: utter_reply_class
+  - intent: about_teacher
+  - action: utter_reply_about_teacher
+  - or:
+    - intent: facilitator
+    - intent: about_teacher2
+    - intent: what_did_he_do
+  - action: utter_reply_about_teacher2  
+
+- story: about teacher with ask about name
+  steps:
+  - intent: invitation
+  - action: utter_reply_invitation
+  - intent: name_teacher
+  - action: utter_reply_name
+  - intent: about_teacher
+  - action: utter_reply_about_teacher
+  - or:
+    - intent: facilitator
+    - intent: about_teacher2
+    - intent: what_did_he_do
+  - action: utter_reply_about_teacher2  
+
+- story: art teacher
+  steps:
+  - intent: invitation
+  - action: utter_reply_invitation
+  - intent: which_subject
+  - action: utter_reply_class
+  - intent: about_teacher
+  - action: utter_reply_about_teacher
+  - or:
+    - intent: facilitator
+    - intent: about_teacher2
+    - intent: what_did_he_do
+  - action: utter_reply_about_teacher2 
+
+- story: art teacher about art
+  steps:
+  - intent: invitation
+  - action: utter_reply_invitation
+  - intent: which_subject
+  - action: utter_reply_class
+  - intent: about_art
+  - action: utter_reply_about_art
+  - or:
+    - intent: facilitator
+    - intent: about_cupboard
+    - intent: what_did_he_do
+  - action: utter_reply_about_teacher2  
+
+- story: about teacher without name
+  steps:
+  - intent: about_teacher
+  - action: utter_reply_about_teacher
+  - or:
+    - intent: facilitator
+    - intent: about_teacher2
+    - intent: what_did_he_do
+  - action: utter_reply_about_teacher2  
+
+- story: art and cupboard
+  steps:
+  - intent: about_art
+  - action: utter_reply_about_art
+  - or:
+    - intent: facilitator
+    - intent: about_cupboard
+    - intent: what_did_he_do
+  - action: utter_reply_about_teacher2
+
+- story: about teacher and game 
+  steps:
+  - intent: invitation
+  - action: utter_reply_invitation
+  - intent: which_subject
+  - action: utter_reply_class
+  - intent: about_teacher
+  - action: utter_reply_about_teacher
+  - or:
+    - intent: facilitator
+    - intent: about_teacher2
+    - intent: what_did_he_do
+  - action: utter_reply_about_teacher2 
+  - or:
+    - intent: facilitator
+    - intent: about_game
+  - action: utter_reply_about_game
+  - or:
+    - intent: facilitator  
+    - intent: about_game
+    - intent: what_did_he_do
+  - action: utter_reply_about_game2
+  - or:
+    - intent: facilitator
+    - intent: about_game3
+  - action: utter_reply_about_game3
+  - or:
+    - intent: what_did_he_say
+    - intent: facilitator
+  - action: utter_reply_what_did_he_say
+  - or:
+    - intent: facilitator
+    - intent: went_outside
+  - action: utter_end_of_story
+
+- story: about art and game
+  steps: 
+  - intent: about_art
+  - action: utter_reply_about_art
+  - or:
+    - intent: facilitator
+    - intent: about_cupboard
+    - intent: what_did_he_do
+  - action: utter_reply_about_teacher2
+  - or:
+    - intent: facilitator
+    - intent: about_game
+  - action: utter_reply_about_game
+  - or:
+    - intent: facilitator  
+    - intent: about_game
+    - intent: what_did_he_do
+  - action: utter_reply_about_game2
+  - or:
+    - intent: facilitator
+    - intent: about_game3
+  - action: utter_reply_about_game3
+  - or:
+    - intent: what_did_he_say
+    - intent: facilitator
+  - action: utter_reply_what_did_he_say
+  - or:
+    - intent: facilitator
+    - intent: went_outside
+  - action: utter_end_of_story
+
+- story: about crying
+  steps:
+  - intent: about_crying
+  - action: utter_reply_about_crying
+  - or:
+    - intent: what_did_he_do
+    - intent: what_did_he_say
+    - intent: facilitator
+  - action: utter_reply_what_did_he_say
+  - or:
+    - intent: facilitator
+    - intent: went_outside
+  - action: utter_end_of_story
+
+- story: about show and tell and crying
+  steps: 
+  - action: utter_reply_about_teacher2
+  - or:
+    - intent: facilitator
+    - intent: about_game
+    - intent: what_did_he_do
+  - action: utter_reply_about_game
+  - or:
+    - intent: facilitator  
+    - intent: about_game
+  - action: utter_reply_about_game2
+  - or:
+    - intent: facilitator
+    - intent: about_game3
+  - action: utter_reply_about_game3
+  - intent: about_crying
+  - action: utter_reply_about_crying
+  - or:
+    - intent: what_did_he_say
+    - intent: facilitator
+  - action: utter_reply_what_did_he_say
+  - or:
+    - intent: facilitator
+    - intent: went_outside
+  - action: utter_end_of_story
+
+- story: touching
+  steps:
+  - intent: what_did_he_do
+  - action: utter_reply_what_did_he_do
+  - or:
+    - intent: facilitator
+    - intent: about_touching
+  - action: utter_reply_about_touching
+  - or:
+    - intent: facilitator
+    - intent: what_did_he_do
+  - action: utter_touch_mini
+
+- story: touching and crying
+  steps:
+  - intent: what_did_he_do
+  - action: utter_reply_what_did_he_do
+  - or:
+    - intent: facilitator
+    - intent: about_touching
+  - action: utter_reply_about_touching
+  - or:
+    - intent: facilitator
+    - intent: what_did_he_do
+  - action: utter_touch_mini
+  - intent: about_crying
+  - action: utter_reply_about_crying
+  - or:
+    - intent: what_did_he_say
+    - intent: facilitator
+  - action: utter_reply_what_did_he_say
+  - or:
+    - intent: facilitator
+    - intent: went_outside
+  - action: utter_end_of_story
+
+- story: touching what_did_he_say
+  steps:
+  - intent: what_did_he_do
+  - action: utter_reply_what_did_he_do
+  - or:
+    - intent: facilitator
+    - intent: about_touching
+  - action: utter_reply_about_touching
+  - or:
+    - intent: facilitator
+    - intent: what_did_he_do
+  - action: utter_touch_mini
+  - or:
+    - intent: facilitator
+    - intent: what_did_he_say
+  - action: utter_reply_what_did_he_say
+  - or:
+    - intent: facilitator
+    - intent: went_outside
+  - action: utter_end_of_story
+
+- story: Not tell anyone
+  steps:
+  - intent: what_did_he_say
+  - action: utter_not_tell_anyone
+  - intent: not_in_trouble
+  - action: utter_confirmation
+
+- story: Not tell anyone and told dad
+  steps:
+  - intent: what_did_he_say
+  - action: utter_not_tell_anyone
+  - intent: not_in_trouble
+  - action: utter_confirmation
+  - intent: told_who
+  - action: utter_told_dad
+  - intent: not_in_trouble
+  - action: utter_confirmation
+
+- story: Told dad
+  steps:
+  - intent: told_who
+  - action: utter_told_dad
+  - intent: not_in_trouble
+  - action: utter_confirmation
+
+
+- story: interactive_story_1
+  steps:
+  - intent: about_art
+  - action: utter_reply_about_art
+  - intent: about_cupboard
+  - action: utter_reply_about_teacher2
+  - intent: about_game
+  - action: utter_reply_about_game
+  - intent: about_game
+  - action: utter_reply_about_game2
+  - intent: about_game3
+  - action: utter_reply_about_game3
+  - intent: about_crying
+  - action: utter_reply_about_crying
+
+- story: interactive happy path full
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: intro
+  - action: utter_confirmation
+  - intent: invitation
+  - action: utter_reply_invitation
+  - intent: name_teacher
+  - action: utter_reply_name
+  - intent: about_teacher
+  - action: utter_reply_about_teacher
+  - intent: about_teacher2
+  - action: utter_reply_about_teacher2
+  - intent: about_game
+  - action: utter_reply_about_game
+  - intent: about_game
+  - action: utter_reply_about_game2
+  - intent: what_did_he_do
+  - action: utter_reply_what_did_he_do
+  - intent: what_did_he_do
+  - action: utter_touch_mini
+  - intent: about_crying
+  - action: utter_reply_about_crying
+  - intent: facilitator
+  - action: utter_reply_what_did_he_say
+  - intent: facilitator
+  - action: utter_end_of_story
+  - intent: what_did_he_say
+  - action: utter_not_tell_anyone
+  - intent: not_in_trouble
+  - action: utter_confirmation
+  - intent: told_who
+  - action: utter_told_dad
+  - intent: anyone_else
+  - action: utter_reluctance
+  - intent: closure
+  - action: utter_goodbye
+
+- story: interactive happy path full 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: intro
+  - action: utter_confirmation
+  - intent: invitation
+  - action: utter_reply_invitation
+  - intent: name_teacher
+  - action: utter_reply_name
+  - intent: about_art
+  - action: utter_reply_about_art
+  - intent: about_cupboard
+  - action: utter_reply_about_teacher2
+  - intent: about_game
+  - action: utter_reply_about_game
+  - intent: facilitator
+  - action: utter_reply_about_game2
+  - intent: what_did_he_do
+  - action: utter_reply_what_did_he_do
+  - intent: about_touching
+  - action: utter_reply_about_touching
+  - intent: facilitator
+  - action: utter_touch_mini
+  - or:
+    - intent: what_did_he_do
+    - intent: what_did_he_say
+  - action: utter_reply_what_did_he_say
+  - intent: how_many_times
+  - action: utter_reply_how_many_times
+  - intent: closure
+  - action: utter_goodbye
+
+- story: interactive_story
+  steps:
+  - intent: invitation
+  - action: utter_reply_invitation
+  - intent: about_teacher
+  - action: utter_reply_about_teacher
+  - intent: about_teacher2
+  - action: utter_reply_about_teacher2
+  - intent: facilitator
+  - action: utter_reply_about_game
+  - intent: about_game
+  - action: utter_reply_about_game2
+  - intent: about_game3
+  - action: utter_reply_about_game3
+  - intent: facilitator
+  - action: utter_reply_what_did_he_say
+  - intent: facilitator
+  - action: utter_end_of_story
+  - intent: what_did_he_do
+  - action: utter_reply_what_did_he_do
+  - intent: about_touching
+  - action: utter_reply_about_touching
+  - intent: what_did_he_do
+  - action: utter_touch_mini
+  - intent: facilitator
+  - action: utter_reply_what_did_he_say
+  - intent: what_did_he_say
+  - action: utter_not_tell_anyone
+  - intent: not_in_trouble
+  - action: utter_confirmation
+  - intent: told_who
+  - action: utter_told_dad
+  - intent: not_in_trouble
+  - action: utter_confirmation
+  - intent: closure
+  - action: utter_goodbye
+
+- story: interactive_story2
+  steps:
+  - intent: invitation
+  - action: utter_reply_invitation
+  - intent: which_subject
+  - action: utter_reply_class
+  - intent: about_teacher
+  - action: utter_reply_about_teacher
+  - intent: about_teacher2
+  - action: utter_reply_about_teacher2
+  - intent: about_game
+  - action: utter_reply_about_game
+  - intent: about_game
+  - action: utter_reply_about_game2
+  - intent: facilitator
+  - action: utter_reply_about_game3
+  - intent: what_did_he_do
+  - action: utter_reply_what_did_he_do
+  - or:
+    - intent: facilitator
+    - intent: about_touching
+    - intent: what_did_he_do
+  - action: utter_reply_about_touching
+  - or:
+    - intent: facilitator
+    - intent: what_did_he_do
+  - action: utter_touch_mini
+  - or:
+    - intent: facilitator
+    - intent: what_did_he_say
+  - action: utter_reply_what_did_he_say
+  - intent: facilitator
+  - action: utter_end_of_story 
+
+- story: interactive_story_1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: intro
+  - action: utter_confirmation
+  - intent: invitation
+  - action: utter_reply_invitation
+  - intent: name_teacher
+  - action: utter_reply_name
+  - intent: about_teacher
+  - action: utter_reply_about_teacher
+  - intent: facilitator
+  - action: utter_reply_about_teacher2
+  - or:
+    - intent: facilitator
+    - intent: about_game
+  - action: utter_reply_about_game
+  - or:
+    - intent: facilitator
+    - intent: about_game
+  - action: utter_reply_about_game2
+  - or:
+    - intent: about_game3
+    - intent: facilitator
+  - action: utter_reply_about_game3
+  - intent: how_did_you_feel
+  - action: utter_reply_how_did_you_feel
+  - intent: what_did_he_do
+  - action: utter_reply_what_did_he_do
+  - or:
+    - intent: facilitator 
+    - intent: about_touching
+  - action: utter_reply_about_touching
+  - or:
+    - intent: facilitator
+    - intent: what_did_he_do
+  - action: utter_touch_mini
+  - intent: what_did_he_say
+  - action: utter_reply_what_did_he_say
+  - intent: facilitator
+  - action: utter_end_of_story
+  - intent: told_who
+  - action: utter_told_dad
+  - intent: closure
+  - action: utter_goodbye
+
+- story: interactive_story3
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: whats_your_name
+  - action: utter_reply_my_name
+  - intent: which_grade
+  - action: utter_reply_age
+  - intent: smalltalk
+  - action: utter_reluctance
+  - intent: intro
+  - action: utter_confirmation
+  - intent: intro
+  - action: utter_confirmation
+  - intent: invitation
+  - action: utter_reply_invitation
+  - intent: about_teacher
+  - action: utter_reply_about_teacher
+  - intent: about_teacher2
+  - action: utter_reply_about_teacher2
+  - intent: about_game
+  - action: utter_reply_about_game
+  - intent: about_game
+  - action: utter_reply_about_game2
+  - intent: what_did_he_do
+  - action: utter_reply_what_did_he_do
+  - intent: how_did_you_feel
+  - action: utter_reply_how_did_you_feel
+  - intent: about_game3
+  - action: utter_reply_about_game3
+
+- story: interactive_story4
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: whats_your_name
+  - action: utter_reply_my_name
+  - intent: which_grade
+  - action: utter_reply_age
+  - intent: about_school
+  - action: utter_reply_about_school
+  - intent: intro
+  - action: utter_confirmation
+  - intent: about_teacher
+  - action: utter_reply_about_teacher
+  - intent: name_teacher
+  - action: utter_reply_name
+  - intent: about_teacher2
+  - action: utter_reply_about_teacher2
+  - intent: about_game
+  - action: utter_reply_about_game
+  - intent: about_game
+  - action: utter_reply_about_game2
+  - intent: what_did_he_do
+  - action: utter_reply_what_did_he_do
+  - intent: facilitator
+  - action: utter_reply_about_touching
+  - intent: facilitator
+  - action: utter_touch_mini
+  - intent: about_game3
+  - action: utter_reply_about_game3
+  - intent: about_crying
+  - action: utter_reply_about_crying
+  - intent: what_did_he_say
+  - action: utter_reply_what_did_he_say
+  - or:
+    - intent: facilitator
+    - intent: went_outside
+  - action: utter_end_of_story
+  - intent: told_who
+  - action: utter_told_dad
+  - intent: how_many_times
+  - action: utter_reply_how_many_times
+  - intent: closure
+  - action: utter_goodbye
+- story: interactive_story_1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: whats_your_name
+  - action: utter_reply_my_name
+  - intent: which_grade
+  - action: utter_reply_age
+  - intent: about_school
+  - action: utter_reply_about_school
+  - intent: name_teacher
+  - action: utter_reply_name
+  - intent: about_art
+  - action: utter_reply_about_art
+  - intent: about_cupboard
+  - action: utter_reply_about_teacher2
+  - intent: about_game
+  - action: utter_reply_about_game
+  - intent: about_game
+  - action: utter_reply_about_game2
+  - intent: about_game3
+  - action: utter_reply_about_game3
+  - intent: what_did_he_do
+  - action: utter_reply_what_did_he_do
+  - intent: about_touching
+  - action: utter_reply_about_touching
+  - intent: facilitator
+  - action: utter_touch_mini
+  - intent: what_did_he_say
+  - action: utter_reply_what_did_he_say
+  - intent: went_outside
+  - action: utter_end_of_story
+  - intent: what_did_he_say
+  - action: utter_not_tell_anyone
+  - intent: not_in_trouble
+  - action: utter_confirmation
+  - intent: told_who
+  - action: utter_told_dad
+  - intent: not_in_trouble
+  - action: utter_confirmation
+  - intent: anyone_else
+  - action: utter_reluctance
+  - intent: how_many_times
+  - action: utter_reply_how_many_times
+  - intent: how_did_you_feel
+  - action: utter_reply_how_did_you_feel
+  - intent: closure
+  - action: utter_goodbye

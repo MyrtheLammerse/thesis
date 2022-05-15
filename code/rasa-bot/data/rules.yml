@@ -1,0 +1,107 @@
+version: "2.0"
+
+rules:
+
+- rule: greet
+  conversation_start: true
+  steps:
+  - intent: greet
+  - action: utter_greet
+
+- rule: intro
+  steps:
+  - intent: intro
+  - action: utter_confirmation
+- rule: your name
+  steps: 
+  - intent: whats_your_name
+  - action: utter_reply_my_name
+- rule: his name
+  steps:
+  - intent: name_teacher
+  - action: utter_reply_name
+- rule: smalltalk
+  steps: 
+  - intent: smalltalk
+  - action: utter_reluctance
+- rule: age
+  steps:
+  - intent: which_grade
+  - action: utter_reply_age
+- rule: invitation
+  steps: 
+  - intent: invitation
+  - action: utter_reply_invitation
+
+- rule: about teacher
+  steps:
+  - intent: about_teacher
+  - action: utter_reply_about_teacher
+
+- rule: about teacher2
+  steps:
+  - intent: about_teacher2
+  - action: utter_reply_about_teacher2
+
+- rule: about school
+  steps: 
+  - intent: about_school
+  - action: utter_reply_about_school
+
+- rule: which subject
+  steps:
+  - intent: which_subject
+  - action: utter_reply_class
+
+- rule: about art
+  steps:
+  - intent: about_art
+  - action: utter_reply_about_art
+
+- rule: about crying
+  steps:
+  - intent: about_crying
+  - action: utter_reply_about_crying
+
+# - rule: what did he do
+#   steps:
+#   - intent: what_did_he_do
+#   - action: utter_reply_what_did_he_do
+
+- rule: about_game3
+  steps:
+  - intent: about_game3
+  - action: utter_reply_about_game3
+
+- rule: touching
+  steps:
+  - intent: about_touching
+  - action: utter_reply_about_touching
+
+- rule: told who
+  steps:
+  - intent: told_who
+  - action: utter_told_dad
+
+- rule: How many times
+  steps: 
+  - intent: how_many_times
+  - action: utter_reply_how_many_times
+
+- rule: Others
+  steps:
+  - intent: anyone_else
+  - action: utter_reluctance
+
+- rule: how_did_you_feel
+  steps:
+  - intent: how_did_you_feel
+  - action: utter_reply_how_did_you_feel
+
+- rule: Say goodbye anytime the user says goodbye
+  steps:
+  - intent: closure
+  - action: utter_goodbye
+#  - action: action_restart
+# will need to add to all stories as well
+
